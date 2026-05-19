@@ -3,18 +3,20 @@ import { test, expect } from '@playwright/test';
 test('Test Login', async ({ page }) => {
 
   await page.goto('https://practicetestautomation.com/practice-test-login/');
-  await expect(page).toHaveURL(/practicetestautomation\.com/); //validation  ???
-  await expect(page).toHaveTitle(/Practice Test Automation/);//validation
+  await expect(page).toHaveURL(/practicetestautomation\.com/); 
+  await expect(page).toHaveTitle(/Practice Test Automation/);
 
   await expect(page.getByRole ("textbox", {name: "username"})).toBeVisible(); //validation
   await expect(page.getByRole ("textbox",{name:"username"})).toBeEnabled(); //validation
   await expect(page.getByLabel('Username')).toBeVisible();//validation
   await page.getByRole('textbox',{ name:'username'}).fill('student'); 
+  await expect(page.getByRole ("textbox", {name: "username"})).toHaveValue("student");
 
   await expect(page.getByRole ('textbox', {name:'password'})).toBeVisible(); //validation
   await expect(page.getByRole ("textbox",{name:"password"})).toBeEnabled(); //validation
   await expect(page.getByLabel('Password')).toBeVisible(); //validation
   await page.getByRole("textbox", { name: "password" }).fill("Password123");
+  await expect(page.getByRole ("textbox", {name: "password"})).toHaveValue("Password123");
 
   await expect(page.getByRole ('button',{name:'submit'})).toBeVisible(); //validation
   await expect (page.getByRole ('button',{name:'submit'})).toBeEnabled(); //validation

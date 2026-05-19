@@ -14,17 +14,21 @@ test('Negative Username', async ({ page }) => {
   await page.getByRole("textbox", { name: "password" }).fill("Password123"); //Fill password                 
   await page.getByRole('button', { name: 'Submit' }).click(); //Click submit
 
-  await expect(page.getByText('Your username is invalid!')).toBeVisible();
+  await expect(page.getByText('Your username is invalid!').first()).toBeVisible();
   await expect(page.locator("#error")).toBeVisible();
   await expect(page.locator("#error")).toContainText("Your username is invalid!");
 
-await page.reload();
-// ; 
-await expect(page.locator('#error')).toBeVisible();
-await page.waitForTimeout(5000);
+  await page.reload();
+  await page.pause();
+  await expect(page.locator('#error')).toBeVisible();
+  await page.pause();
   await page.getByRole('textbox',{ name:'username'}).fill(''); 
-  await page.getByRole("textbox", { name: "password" }).fill("Password123"); //Fill password                 
+  await page.pause();
+  await page.getByRole("textbox", { name: "password" }).fill("Password123"); //Fill password       
+  await page.pause();          
   await page.getByRole('button', { name: 'Submit' }).click(); //Click submit
+  await page.pause();
   await expect(page.locator("#error")).toBeVisible();
   await expect(page.locator("#error")).toContainText("Your username is invalid!");
+  await page.pause();
 });

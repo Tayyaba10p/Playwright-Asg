@@ -13,7 +13,6 @@ test.describe('Login page', () => {
     await expect(page.getByRole ("textbox", {name: "password"})).toBeVisible(); //validation
     await page.getByRole('textbox', {name: 'password'}).fill('1234');
 
-
     //select button
     await page.getByRole('button', { name: 'Submit' }).click();
 
