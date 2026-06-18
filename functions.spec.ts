@@ -2,7 +2,7 @@ import { test, expect, Page } from '@playwright/test';
 import { BASE_URL } from '../Fixtures/urlConstants';
 import { USERNAME, PASSWORD } from '../Fixtures/constants';
 
-test('test', async ({ page }) => {
+test('test1', async ({ page }) => {
 
   //Navigate to login page
   await navigateToLoginPage (page);
