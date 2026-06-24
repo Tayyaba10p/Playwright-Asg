@@ -1,0 +1,2 @@
+Patch non-existent id response status: 404
+Response body: {"error":"The Object with id = non-existent-id-000 doesn't exist. Please provide an object id which exists or generate a new Object using POST request and capture the id of it to use it as part of PATCH request after that."}
