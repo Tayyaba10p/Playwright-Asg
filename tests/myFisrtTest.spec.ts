@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from '@playwright/tests';
 
 test('Verify user can open Playwright website', async ({ page }) => {
   // Navigate to website
