@@ -1,0 +1,11 @@
+Updated Object: {
+  "id": "ff8081819d82fab6019ef96f0e38559b",
+  "name": "Apple MacBook Pro 16 - Updated",
+  "updatedAt": 1782301265785,
+  "data": {
+    "year": 2024,
+    "price": 2499.99,
+    "CPU model": "Apple M4 Pro",
+    "Hard disk size": "2 TB"
+  }
+}
