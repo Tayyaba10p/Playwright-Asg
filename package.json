@@ -1,0 +1,31 @@
+{
+  "name": "playwright-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.0.0",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.10.1",
+    "dotenv": "^17.4.2"
+  },
+  "scripts": {
+    "allure:generate": "allure generate allure-results --clean -o allure-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tayyaba10p/playwright-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tayyaba10p/playwright-demo/issues"
+  },
+  "homepage": "https://github.com/Tayyaba10p/playwright-demo#readme"
+}
